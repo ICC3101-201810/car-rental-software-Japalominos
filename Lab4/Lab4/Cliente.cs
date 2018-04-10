@@ -6,27 +6,88 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    public class Cliente
+    abstract class Cliente
     {
-        string TipoCliente;
-        string Tarjeta;
-        Vehiculo vehiculo;
+        public enum clientes { Persona,Empresa,Organizacion,Institucion};
+        public enum tarjeta {LicenciaDeConducir,Autorizacion}
 
+        public clientes TipoCliente;
 
-        public Cliente(string MiTipoCliente, string MiTarjeta,Vehiculo mivehiculo)
+        public tarjeta Tarjeta;
+
+        public Cliente( clientes MiTipoCliente, tarjeta MiTarjeta)
         {
+            TipoCliente = MiTipoCliente;
+            Tarjeta = MiTarjeta;
             
-            if(MiTipoCliente=="persona")
-            {
-                if (MiTarjeta == "Licencia de conducir")
-                {
-                    TipoCliente = MiTipoCliente;
-                    Tarjeta = MiTarjeta;
-                }
-            }
-            if (MiTipoCliente=="empresa"||MiTipoCliente == "organización"||MiTipoCliente == "institución")
-                if (MiTarjeta==)
+            
+        }
 
+        public abstract Boolean AutorizacionA();
+    }
+    class Persona : Cliente
+    {
+        
+        public new Boolean AutorizacionA()
+        {
+            if (TipoCliente == clientes.Persona && Tarjeta==tarjeta.LicenciaDeConducir)
+
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+   
+    }
+    class Empresa : Cliente
+    {
+        public new Boolean AutorizacionA()
+        {
+            if (TipoCliente == clientes.Empresa && Tarjeta == tarjeta.Autorizacion)
+
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    class Organizacion : Cliente
+    {
+   
+        
+        public new Boolean AutorizacionA()
+        {
+            if (TipoCliente == clientes.Organizacion && Tarjeta == tarjeta.Autorizacion)
+
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    class Institucion : Cliente
+    {
+        public new Boolean AutorizacionA()
+        {
+            if (TipoCliente == clientes.Institucion && Tarjeta == tarjeta.Autorizacion)
+
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

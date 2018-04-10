@@ -8,15 +8,15 @@ namespace Lab4
 {
     public class Vehiculo
     {
-        string vehiculo;
-        public Vehiculo(string mivehiculo)
+        public enum vehiculo { Auto, Acuatico, Moto, Camion, Bus, MaquinariaPesada };
+        public vehiculo TVehiculo;
+
+        public Vehiculo(vehiculo miTVehiculo)
         {
-            if (mivehiculo == "auto" || mivehiculo == "acuático" || mivehiculo == "moto" || mivehiculo == "camión" || mivehiculo == "bus" || mivehiculo == "maquinaria pesada")
-            {
-                vehiculo = mivehiculo;
-            }
+            TVehiculo = miTVehiculo;           
            
         }
+        
 
 
 

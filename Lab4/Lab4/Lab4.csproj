@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accesorio.cs" />
+    <Compile Include="Arriendo.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Program.cs" />
