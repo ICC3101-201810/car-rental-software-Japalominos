@@ -12,25 +12,37 @@ namespace Lab4
         {
             this.Rut = Rut;
         }
-        public  Boolean LicenciaOAutorizacion(Vehiculo vehiculo,bool Tarjeta)
+        public override  Boolean LicenciaOAutorizacion(Vehiculo vehiculo)
         {
-            base.LicenciaOAutorizacion();
+            
             if (vehiculo.TipoDeVehiculo == "Bus")
             {
+                Console.WriteLine("Lo lamento usted no puede arrendar este tipo de vehiculo");
                 return false;
                
 
             }
             else
             {
-                if (Tarjeta == true)
+                Console.WriteLine("Aprete 0 si tiene la licencia para operar:" + vehiculo.TipoDeVehiculo+ ", si no aprete 1");
+
+                while (true)
                 {
-                    return true;
+                    string decc = Console.ReadLine();
+                    if (decc == "0")
+                    {
+                        return true;
+                    }
+                    if (decc=="1")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        
+                    }
                 }
-                else
-                {
-                    return false;
-                }
+                
             }
             
             

@@ -12,9 +12,9 @@ namespace Lab4
         {
             this.Rut = Rut;
         }
-        public  bool Municipalidad(Vehiculo vehiculo)
+        public override  bool Municipalidad(Vehiculo vehiculo)
         {
-            base.Municipalidad();
+            
 
             if (vehiculo.TipoDeVehiculo == "Bus")
             {
@@ -44,6 +44,7 @@ namespace Lab4
                 else
                 {
                     Console.WriteLine("Lo siento su petición no fue aprobada");
+                    Console.ReadKey();
                     return false;
                 }
 
@@ -61,6 +62,7 @@ namespace Lab4
                 }
                 else
                 {
+                    Console.WriteLine("Felicidades su peticion fue aprobada");
                     return false;
                 }
             }
@@ -68,6 +70,47 @@ namespace Lab4
             {
                 return false;
             }
+        }
+        public override Boolean LicenciaOAutorizacion(Vehiculo vehiculo)
+        {
+            
+            if (vehiculo.TipoDeVehiculo == "Bus" || vehiculo.TipoDeVehiculo=="MaquinariaPesada")
+            {
+                bool permiso = Municipalidad(vehiculo);
+                if (permiso == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Aprete 0 si tiene la autorización para operar:" + vehiculo.TipoDeVehiculo + ", si no aprete 1");
+
+                while (true)
+                {
+                    string decc = Console.ReadLine();
+                    if (decc == "0")
+                    {
+                        return true;
+                    }
+                    if (decc == "1")
+                    {
+                        return false;
+                    }
+                    else
+                    {
+
+                    }
+                }
+
+            }
+
+
+
         }
     }
 }

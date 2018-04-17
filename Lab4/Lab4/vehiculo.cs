@@ -10,10 +10,14 @@ namespace Lab4
     {
         public string TipoDeVehiculo;
         public int Stock;
-        public Vehiculo( string TipoDeVehiculo, int Stock)
+        public string Marca;
+        public int Precio;
+        public Vehiculo( string TipoDeVehiculo, int Stock, string Marca, int Precio )
         {
             this.TipoDeVehiculo = TipoDeVehiculo;
             this.Stock = Stock;
+            this.Marca = Marca;
+            this.Precio = Precio;
         } 
         
        

@@ -9,7 +9,7 @@ namespace Lab4
     abstract class General
     {
         public string Algo ;
-        public int Num;
+        
         
 
     }
