@@ -8,21 +8,40 @@ namespace Lab4
 {
     class Arriendo
     {
-        List<Accesorio> ListaAccesorio;
-        Vehiculo vehiculo;
-        Sucursal sucursal;
-        Cliente cliente;
+        List<string> ListaAccesorio;
+        string vehiculo;
+        string sucursal;
+        public Cliente cliente;
         DateTime Fecha;
         int Total;
         string FechaDeTermino;
+        bool Tarjeta;
 
-
-        public Arriendo(Vehiculo MiVehiculo, Sucursal Misucursal, Cliente MiCliente, List<Accesorio> MiListaAccesorio,DateTime MiFecha,string Termino,int MiTotal)
+        public Arriendo(string vehiculo, string sucursal, Cliente cliente, DateTime Fecha, int Total, string FechaDeTermino,bool Tarjeta)
         {
-            ListaAccesorio = MiListaAccesorio;
-            vehiculo = MiVehiculo;
-            cliente = MiCliente;
-            sucursal = Misucursal;
+            this.vehiculo = vehiculo;
+            this.sucursal = sucursal;
+            this.cliente = cliente;
+            this.Fecha = Fecha;
+            this.FechaDeTermino = FechaDeTermino;
+            this.Total = Total;
+            this.Tarjeta = Tarjeta;
+
         }
-    }
+
+        public Arriendo(string vehiculo, string sucursal, Cliente cliente, DateTime Fecha, int Total, string FechaDeTermino,string Tarjeta, List<string> ListaAccesorio)
+        {
+
+            this.ListaAccesorio = ListaAccesorio;
+            this.vehiculo = vehiculo;
+            this.cliente = cliente;
+            this.sucursal = sucursal;
+            this.Fecha = Fecha;
+            this.FechaDeTermino = FechaDeTermino;
+            this.Total = Total;
+
+        }
+       
+    }    
+        
 }

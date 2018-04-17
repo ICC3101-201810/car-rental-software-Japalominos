@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class Sucursal:Listas
+    class Class5
     {
-        public Sucursales(List<string> Sucursal)
-        {
-             Lista = Sucursal;
-
-        }
-        
-
     }
 }

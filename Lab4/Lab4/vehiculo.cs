@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    public class Vehiculo
+    class Vehiculo : General
     {
-        public enum vehiculo { Auto, Acuatico, Moto, Camion, Bus, MaquinariaPesada };
-        public vehiculo TVehiculo;
-
-        public Vehiculo(vehiculo miTVehiculo)
+        public string TipoDeVehiculo;
+        public int Stock;
+        public Vehiculo( string TipoDeVehiculo, int Stock)
         {
-            TVehiculo = miTVehiculo;           
-           
-        }
+            this.TipoDeVehiculo = TipoDeVehiculo;
+            this.Stock = Stock;
+        } 
         
-
-
+       
 
     }
 }

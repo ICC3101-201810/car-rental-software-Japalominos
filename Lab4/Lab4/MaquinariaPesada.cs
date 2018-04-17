@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class Sucursal:Listas
+    class MaquinariaPesada : Vehiculo
     {
-        public Sucursales(List<string> Sucursal)
+        public MaquinariaPesada(string Marca, string Stock)
         {
-             Lista = Sucursal;
-
+            this.Marca = Marca;
+            this.Stock = Stock;
         }
-        
 
     }
 }

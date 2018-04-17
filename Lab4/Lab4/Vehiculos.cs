@@ -6,25 +6,19 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-
-
-
-    abstract class Cliente
+    abstract class Vehiculo : General
     {
-        public string Rut;
-        public virtual Boolean Municipalidad()
+        public string Marca;
+        public int Stock;
+        
+        public virtual Boolean Municipalidad(Cliente cliente)
         {
             return true;
         }
-        public virtual Boolean LicenciaOAutorizacion()
+        public virtual Boolean LicenciaOAutorizacion(Cliente cliente)
         {
             return true;
-
         }
-
-
-
 
     }
 }
-    

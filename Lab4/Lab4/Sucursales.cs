@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class Sucursal:Listas
+    class Sucursal:General
     {
-        public Sucursales(List<string> Sucursal)
+        public Sucursal(string sucursal)
         {
-             Lista = Sucursal;
+            Algo = sucursal;
 
         }
-        
+       
 
     }
 }
