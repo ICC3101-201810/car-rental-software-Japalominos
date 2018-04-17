@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    abstract class General
+    class Devuelto
     {
-        public string Algo ;
-
-
-        
+        Vehiculo vehiculo;
+        DateTime Fecha;
 
     }
-
 }

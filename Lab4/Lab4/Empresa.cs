@@ -22,7 +22,9 @@ namespace Lab4
                 int posibilidad = rnd.Next(1, 100);
                 if (posibilidad > 20)
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Felicidades su peticion fue aprobada. Aprete 1 si quiere un Bus Liviano, 2 por un Bus Normal y 3 por uno de Lujo:");
+                    Console.Beep();
                     string elecc = Console.ReadLine().ToString();
                     if (elecc == "1")
                     {
@@ -43,7 +45,10 @@ namespace Lab4
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Lo siento su petición no fue aprobada");
+                    Console.Beep();
+                    Console.Beep();
                     Console.ReadKey();
                     return false;
                 }
@@ -55,14 +60,19 @@ namespace Lab4
                 int posibilidad = rnd.Next(1, 100);
                 if (posibilidad < 37)
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Felicidades su peticion fue aprobada");
+                    Console.Beep();
                     return true; 
 
 
                 }
                 else
                 {
-                    Console.WriteLine("Felicidades su peticion fue aprobada");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Lo siento su peticion no fue aprobada");
+                    Console.Beep();
+                    Console.Beep();
                     return false;
                 }
             }
@@ -88,6 +98,7 @@ namespace Lab4
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Aprete 0 si tiene la autorización para operar:" + vehiculo.TipoDeVehiculo + ", si no aprete 1");
 
                 while (true)
@@ -95,16 +106,20 @@ namespace Lab4
                     string decc = Console.ReadLine();
                     if (decc == "0")
                     {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Muy bien, puede arrendar este vehiculo");
+                        Console.Beep();
                         return true;
                     }
-                    if (decc == "1")
+                    else if (decc == "1")
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Lo lamento usted no puede arrendar este tipo de vehiculo");
+                        Console.Beep();
+                        Console.Beep();
                         return false;
                     }
-                    else
-                    {
-
-                    }
+                    
                 }
 
             }

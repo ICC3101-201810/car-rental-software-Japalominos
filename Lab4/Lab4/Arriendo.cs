@@ -9,7 +9,7 @@ namespace Lab4
     class Arriendo
     {
         List<Accesorios> ListaAccesorio;
-        Vehiculo vehiculo;
+        public Vehiculo vehiculo;
         Sucursal sucursal;
         public Cliente cliente;
         DateTime Fecha;
